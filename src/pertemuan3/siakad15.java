@@ -1,3 +1,4 @@
+package pertemuan3;
 import java.util.Scanner;
 public class siakad15 {
     public static void main(String[] args) {
@@ -27,9 +28,6 @@ public class siakad15 {
         System.out.println("Mahasiswa dengan Nama " +nama+ " NIM " +nim+" Kelas " +kelas+ " Nomor Absen "+Absen);
         System.out.println("Nilai-Akhir :"+NilaiAkhir);
 
-
-
-
-        
+      
     }
 }
