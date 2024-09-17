@@ -6,9 +6,9 @@ package pertemuan3;
             public static void main(String[] args) {
                 Scanner input = new Scanner(System.in);
                 boolean keanggotaan;
-                int jmlKopi, jmlTeh, jmlroti;
+                double jmlKopi, jmlTeh, jmlroti;
                 double hargakopi = 12000, hargaTeh = 7000, hargaRoti = 20000, totalharga, nominalBayar;
-                float diskon = 10/100;
+                float diskon = 10/100f;
         
                 System.out.print("masukkan keanggotaan (true/false) :");
                 keanggotaan = input.nextBoolean();
@@ -22,10 +22,13 @@ package pertemuan3;
                 totalharga = (jmlKopi*hargakopi) + (jmlTeh*hargaTeh) + (jmlroti*hargaRoti);
         
                 nominalBayar = totalharga - (diskon*totalharga);
-        
+                int nominalint = (int)nominalBayar;
+                
+                
                 System.out.println("Keanggotaan pelanggan " +keanggotaan);
                 System.out.println("item pembelian "+jmlKopi+" kopi "+jmlTeh+" teh "+jmlroti+" roti ");
                 System.out.println("nominal bayar : "+nominalBayar);
+                System.out.println("nominalint :"+nominalint);
         
         
         
