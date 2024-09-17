@@ -8,7 +8,7 @@ package pertemuan3;
                 boolean keanggotaan;
                 int jmlKopi, jmlTeh, jmlroti;
                 double hargakopi = 12000, hargaTeh = 7000, hargaRoti = 20000, totalharga, nominalBayar;
-                float diskon = 10/100f;
+                float diskon = 10/100;
         
                 System.out.print("masukkan keanggotaan (true/false) :");
                 keanggotaan = input.nextBoolean();
