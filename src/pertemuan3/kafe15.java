@@ -23,12 +23,15 @@ package pertemuan3;
         
                 nominalBayar = totalharga - (diskon*totalharga);
                 int nominalint = (int)nominalBayar;
-                
+                byte nominalByte = (byte) nominalBayar;
+                      
                 
                 System.out.println("Keanggotaan pelanggan " +keanggotaan);
                 System.out.println("item pembelian "+jmlKopi+" kopi "+jmlTeh+" teh "+jmlroti+" roti ");
                 System.out.println("nominal bayar : "+nominalBayar);
-                System.out.println("nominalint :"+nominalint);
+                System.out.println("nominal int :"+nominalint);
+                System.out.println("nominal byte :"+nominalByte);
+                
         
         
         
