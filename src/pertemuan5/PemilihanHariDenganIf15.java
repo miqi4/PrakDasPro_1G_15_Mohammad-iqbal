@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class PemilihanHariDenganIf15 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int dayName, dayType;
+        int dayName;
         System.out.print("input day name : ");
         dayName = sc.nextInt();
 
