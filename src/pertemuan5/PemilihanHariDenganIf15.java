@@ -4,7 +4,7 @@ public class PemilihanHariDenganIf15 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int dayName;
-        System.out.print("input day name : ");
+        System.out.print("input day number : ");
         dayName = sc.nextInt();
 
         if (dayName>0 && dayName<6) {System.out.println("weekday");}
