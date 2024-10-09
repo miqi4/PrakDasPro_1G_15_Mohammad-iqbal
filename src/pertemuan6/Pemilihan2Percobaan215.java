@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Pemilihan2Percobaan215 {
     public static void main(String[] args) {
         Scanner input15 = new Scanner(System.in);
-        int pilihan_menu ;
+        int pilihan_menu;
         double diskon=0.10,harga,total_bayar;
-        String member;
+        String member,QRIS;
 
         System.out.println("-----------------------------");
         System.out.println("======= MENU KAFE JTI =======");
@@ -17,13 +17,17 @@ public class Pemilihan2Percobaan215 {
         System.out.print("masukkan angka dari menu yang dipilih = ");
         pilihan_menu = input15.nextInt();
         input15.nextLine();
-        System.out.print("apakah punya member (y/n) ? =");
+        System.out.print("apakah punya member (y/n) ? = ");
         member = input15.nextLine();
+        System.out.print("membayar menggunakan QRIS (y/n) ?");
+        QRIS = input15.nextLine();
         System.out.println("--------------------------------------");
 
         if (member.equalsIgnoreCase("y")) { 
             diskon = 0.10;
             System.out.println("Besar diskon = 10%");
+
+        
         
         if (pilihan_menu == 1) {
             harga = 14000;
@@ -42,8 +46,15 @@ public class Pemilihan2Percobaan215 {
             return;  
         }
         
+        if (QRIS.equals("y")) {
+        total_bayar = harga - (harga * diskon);
+        System.out.println("Total bayar setelah diskon = " + (total_bayar-1000));}
+        if (QRIS.equals("n")) {
         total_bayar = harga - (harga * diskon);
         System.out.println("Total bayar setelah diskon = " + total_bayar);}
+
+
+    }
 
         else if (member.equalsIgnoreCase("n")) {  
             if (pilihan_menu == 1) {
@@ -63,8 +74,11 @@ public class Pemilihan2Percobaan215 {
                 return;  
             }
         
+            if (QRIS.equals("y")) {
+                System.out.println("Total bayar setelah diskon = " + (harga-1000));}
+                if (QRIS.equals("n")) {
+                System.out.println("Total bayar = " + harga);}
             
-            System.out.println("Total bayar = " + harga);
         } else {
             System.out.println("Member tidak valid");
         }
