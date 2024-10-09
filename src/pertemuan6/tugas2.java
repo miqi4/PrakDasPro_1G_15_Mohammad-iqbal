@@ -12,7 +12,7 @@ public class tugas2 {
         if (buku.equalsIgnoreCase("kamus")&&jmlhbuku>2) {
             System.out.println("diskon 12%");} 
         else if (buku.equalsIgnoreCase("kamus")&&jmlhbuku<3) {
-            System.out.println("diskon 12%");}    
+            System.out.println("diskon 10%");}    
         else if (buku.equalsIgnoreCase("novel")&&jmlhbuku>3) {
             System.out.println("diskon 9%");} 
         else if (buku.equalsIgnoreCase("novel")&&jmlhbuku<4) {
