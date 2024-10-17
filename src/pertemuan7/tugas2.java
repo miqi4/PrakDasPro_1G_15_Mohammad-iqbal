@@ -22,7 +22,6 @@ public class tugas2 {
                 System.out.println("total pembayaran = "+(durasi*2000));
                 totalakhir+=durasi*2000;
             }
-            
         }continue;
     }while(jenis!=0);
     System.out.print("total pengahasilan = "+totalakhir);
