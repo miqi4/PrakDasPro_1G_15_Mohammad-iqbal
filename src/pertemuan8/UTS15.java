@@ -85,7 +85,7 @@ public class UTS15 {
              System.out.println("selesai");   
             break;} 
             }
-        }while(menu15==0);
+        }while(menu15!=0);
        } 
     
     }
