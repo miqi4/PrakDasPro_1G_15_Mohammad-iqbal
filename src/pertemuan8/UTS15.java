@@ -20,6 +20,7 @@ public class UTS15 {
         System.out.println("pilih menu : ");
         System.out.println("1. Data karyawan");
         System.out.println("2. Gaji karyawan");
+        System.out.println("0. keluar");
         System.out.print("pilih menu : ");
         menu15 = iqbal.nextInt();
         iqbal.nextLine();
@@ -84,7 +85,7 @@ public class UTS15 {
              System.out.println("selesai");   
             break;} 
             }
-        }while(true);
+        }while(menu15==0);
        } 
     
     }
