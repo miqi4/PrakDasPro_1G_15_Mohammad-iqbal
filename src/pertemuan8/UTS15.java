@@ -82,10 +82,10 @@ public class UTS15 {
             menu215 = iqbal.nextLine(); 
             if (menu215.equalsIgnoreCase("y")); 
             else if (menu215.equalsIgnoreCase("t")) {
-             System.out.println("selesai");   
+            System.out.println("selesai");   
             break;} 
             }
         }while(menu15!=0);
-       } 
+    } 
     
     }
