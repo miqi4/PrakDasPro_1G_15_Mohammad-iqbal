@@ -11,7 +11,7 @@ public class Bioskop15 {
         Penonton[3][0] = "gisel";
         Penonton[3][1] = "hana";
         for (int i = 0; i < Penonton.length; i++) {
-            System.out.println("penonton pada baris ke-"+(i+1)+" : "+String.join(" , ",Penonton[i]));
+        System.out.println("penonton pada baris ke-"+(i+1)+" : "+String.join(" , ",Penonton[i]));
         }
     }
 }
