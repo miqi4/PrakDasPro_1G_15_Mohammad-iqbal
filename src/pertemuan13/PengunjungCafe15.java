@@ -5,6 +5,7 @@ public class PengunjungCafe15 {
         System.out.println("daftar nama pengunjung");
         for (int i = 0; i < namapengunjung.length; i++) {
             System.out.println("- "+namapengunjung[i]);
+            
         }
     }
     public static void main(String[] args) {
