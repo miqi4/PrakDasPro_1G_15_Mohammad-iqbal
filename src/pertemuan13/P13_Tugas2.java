@@ -1,26 +1,26 @@
 package pertemuan13;
-
 import java.util.Scanner;
-
 public class P13_Tugas2 {
-    static void input(int[][] terjual, String[] menu) {
+    static void input(int[][] terjual, String[] menu,int[] hari) {
         Scanner sc = new Scanner(System.in);
-        for (int i = 0 ; i < terjual.length; i++) {
-            System.out.println("PENJUALAN HARI "+(i+1));
+        for (int i = 0 ; i < 7; i++) {
+            System.out.print("PENJUALAN HARI ke ");
+            hari[i]=sc.nextInt();
         for (int j = 0 ; j < menu.length; j++) {
             System.out.print(menu[j]+" = ");
             terjual[i][j] = sc.nextInt();
         }System.out.println();}
+        System.out.print("menu");
+        for (int i = 0; i < 7; i++) {
+            System.out.print("  Hari "+hari[i]);
+        }System.out.println();
     }
-    static void tabel(int[][] terjual, String[] menu) {
-        System.out.println("               Hari 1  Hari 2  Hari 3  Hari 4  Hari 5  Hari 6  Hari 7");
+    static void tabel(int[][] terjual, String[] menu,int[] hari) {
         for (int i = 0; i < menu.length; i++) {
             System.out.print(menu[i]);
             for (int j = 0; j < terjual.length; j++) {
                 System.out.print("   |   "+terjual[j][i]);
-            }System.out.println();
-        }
-    }
+            }System.out.println();}}
     static void menuPenjualanTertinggi(int[][] terjual, String[] menu) {
         int maxPenjualan = 0;
         String menuTerlaris = " ";
@@ -33,9 +33,7 @@ public class P13_Tugas2 {
                 maxPenjualan = totalPenjualan;
                 menuTerlaris = menu[i];
             }
-        }
-        System.out.println("Menu dengan penjualan tertinggi: " + menuTerlaris + " dengan total " + maxPenjualan + " penjualan.");
-    }
+        }System.out.println("Menu dengan penjualan tertinggi: " + menuTerlaris + " dengan total " + maxPenjualan + " penjualan.");}
     static void rataRataPenjualan(int[][] terjual, String[] menu) {
         System.out.println("Rata-rata penjualan setiap menu:");
         for (int i = 0; i < 5; i++) {
@@ -45,13 +43,18 @@ public class P13_Tugas2 {
             }
             double rataRata = (double) totalPenjualan / 7;
             System.out.println(menu[i]+" = "+rataRata);
-        }
-    }
+        }}
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[]menu=new String[5];
+        int[] hari=new int[7];
+        for (int i = 0; i < menu.length; i++) {
+            System.out.print("masukkan nama menu "+(i+1)+" : ");
+            menu[i] = sc.nextLine();
+        }
         int[][]terjual=new int[7][5];
-        String[]menu={"kopi      ","teh       ","es degan  ","roti bakar","gorengan  "};
-        input(terjual, menu);
-        tabel(terjual, menu);
+        input(terjual, menu,hari);
+        tabel(terjual, menu, hari);
         menuPenjualanTertinggi(terjual, menu);
         rataRataPenjualan(terjual, menu);
     }
