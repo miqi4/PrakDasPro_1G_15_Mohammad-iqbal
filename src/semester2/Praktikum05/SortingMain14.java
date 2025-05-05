@@ -9,7 +9,6 @@ public class SortingMain14 {
     Sorting14 dataurut1 = new Sorting14(a, a.length);
     System.out.println("data awal 1");
     dataurut1.tampil();
-    dataurut1.bubblesort();
     System.out.println("data sudah diurutkan dengan bubble sort (ASC)");
     dataurut1.tampil();
     System.out.println();
