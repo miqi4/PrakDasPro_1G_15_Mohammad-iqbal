@@ -1,5 +1,4 @@
 package semester2.Jobsheet9;
-
 public class Mahasiswa14 {
     String nama,Nim,Kelas;
     int Nilai;

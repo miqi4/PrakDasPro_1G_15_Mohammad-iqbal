@@ -1,10 +1,8 @@
 package semester2.Jobsheet9;
-
 public class StackKonversi14 {
     int[] TumpukanBiner;
     int top;
     int size;
-
     public StackKonversi14(){
         this.size=32;
         TumpukanBiner = new int [size];
@@ -14,7 +12,7 @@ public class StackKonversi14 {
         return top == -1;
     }
     public boolean isfull(){
-        return size == top -1;
+        return top == size -1;
     }
     public void Push(int data){
         if (isfull()) {
@@ -26,7 +24,7 @@ public class StackKonversi14 {
     }
     public int pop(){
         if (isEmpty()) {
-            System.out.println("stack kos0ng");
+            System.out.println("stack kosong");
             return -1;
         }else{
             int data = TumpukanBiner[top];
