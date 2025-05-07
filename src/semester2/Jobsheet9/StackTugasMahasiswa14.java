@@ -27,8 +27,7 @@ public class StackTugasMahasiswa14 {
             top++;
             stack[top] = mhs;
         }else{
-            System.out.println("Stack penuh! tidak bisa menambahkan tugas lagi");
-        }
+            System.out.println("Stack penuh! tidak bisa menambahkan tugas lagi");}
     }
     public Mahasiswa14 pop(){
         if (!IsEmpty()) {
@@ -37,16 +36,14 @@ public class StackTugasMahasiswa14 {
             return m;
         }else{
             System.out.println("Stack kosong! tidak ada tugas untuk dinilai");
-            return null;
-        }
+            return null;}
     }
     public Mahasiswa14 peek(){
         if (!IsEmpty()) {
             return stack[top];
         }else{
             System.out.println("Stack kosong ! tidak ada tugas yang dikumpulkan");
-            return null;
-        }
+            return null;}
     }
     public void print(){
         for (int i = top; i >= 0; i--) {
@@ -65,6 +62,18 @@ public class StackTugasMahasiswa14 {
     public int tambah() {
         return top + 1;
     }
-    
+    public String konversiDesimalKeBiner(int nilai) {
+        StackKonversi14 stack = new StackKonversi14();
+        while (nilai > 0) {
+            int sisa = nilai % 2;
+            stack.Push(sisa);
+            nilai = nilai / 2;
+        }
+        String biner = new String();
+        while (!stack.isEmpty()) {
+            biner += stack.pop();
+        }
+        return biner;
+    }
 }
 
