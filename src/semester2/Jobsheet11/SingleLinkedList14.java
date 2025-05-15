@@ -60,4 +60,68 @@ public class SingleLinkedList14 {
             }
         }
     }
-}
+    public void getData(int index){
+        Node14 tmp = Head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.Next;
+        }
+        tmp.data.tampilInformasi();
+    }
+    public int indexOf(String key) {
+        Node14 tmp = Head;
+        int index = 0;
+        while (tmp != null && !tmp.data.nama.equalsIgnoreCase(key)) {
+            tmp = tmp.Next;
+            index++;
+        }
+        if (tmp == null) {
+            return -1;
+        } else {
+            return index;
+        }
+    }
+    public void removeFirst() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih Kosong, tidak dapat dihapus!");
+        } else if (Head == tail) {Head = tail = null;
+        } else {Head = Head.Next;}}
+    public void removeLast() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih Kosong, tidak dapat dihapus!");
+        } else if (Head == tail) {
+            Head = tail = null;
+        } else {
+            Node14 temp = Head;
+            while (temp.Next != tail) {
+                temp = temp.Next;
+            }
+            temp.Next = null;
+            tail = temp;}}
+    public void remove(String key) {
+        if (isEmpty()) {
+            System.out.println("Linked List masih Kosong, tidak dapat dihapus!");
+        } else {
+            Node14 temp = Head;
+            while (temp != null) {
+                if (temp.data.nama.equalsIgnoreCase(key) && temp == Head) {
+                    this.removeFirst();
+                    break;
+                } else if (temp.Next.data.nama.equalsIgnoreCase(key)) {
+                    temp.Next = temp.Next.Next;
+                    if (temp.Next == null) {
+                        tail = temp;
+                    }break;}
+                temp = temp.Next;}}}
+    public void removeAt(int index) {
+        if (index == 0) {
+            removeFirst();
+        } else {
+            Node14 temp = Head;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.Next;
+            }
+            temp.Next = temp.Next.Next;
+            if (temp.Next == null) {
+                tail = temp;
+            }}}}
+
