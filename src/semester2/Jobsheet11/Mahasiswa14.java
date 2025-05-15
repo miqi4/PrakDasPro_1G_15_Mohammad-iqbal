@@ -1,5 +1,4 @@
 package semester2.Jobsheet11;
-
 public class Mahasiswa14 {
     String nama,kelas,Nim;
     double ipk;
@@ -13,5 +12,4 @@ public class Mahasiswa14 {
     void tampilInformasi(){
         System.out.println(nama +"\t"+ Nim+"\t"+kelas+"\t"+ipk);
     }
-    
 }

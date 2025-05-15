@@ -1,5 +1,4 @@
 package semester2.Jobsheet11;
-
 public class Node14 {
     Mahasiswa14 data;
     Node14 Next;

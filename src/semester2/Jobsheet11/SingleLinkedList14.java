@@ -1,5 +1,4 @@
 package semester2.Jobsheet11;
-
 public class SingleLinkedList14 {
     Node14 Head;
     Node14 tail;
@@ -16,9 +15,7 @@ public class SingleLinkedList14 {
             }
             System.out.println();
         }else{
-            System.out.println("Linked list kosong");
-        }
-    }
+            System.out.println("Linked list kosong");}}
     public void addfirst(Mahasiswa14 input){
         Node14 ndInput = new Node14(input, null);
         if (isEmpty()) {
@@ -26,9 +23,7 @@ public class SingleLinkedList14 {
             tail =  ndInput;
         }else{
             ndInput.Next= Head;
-            Head = ndInput;
-        }
-    }
+            Head = ndInput;}}
     public void addLast(Mahasiswa14 input){
         Node14 ndInput = new Node14(input, null);
         if (isEmpty()) {
@@ -36,9 +31,7 @@ public class SingleLinkedList14 {
             tail =  ndInput;
         }else{
             tail.Next= ndInput;
-            tail = ndInput;
-        }
-    }
+            tail = ndInput;}}
     public void insertAfter(String key , Mahasiswa14 input ){
         Node14 ndInput = new Node14(input, null);
         Node14 temp = Head;
@@ -48,9 +41,7 @@ public class SingleLinkedList14 {
                 temp.Next = ndInput;
                 if (ndInput.Next==null) {
                     tail=ndInput;
-                }
-                break;
-            }
+                }break;}
             temp = temp.Next;
         } while (temp !=null);
     }
@@ -62,8 +53,7 @@ public class SingleLinkedList14 {
         }else{
             Node14 temp = Head;
             for (int i = 0; i < index-1; i++) {
-                temp = temp.Next;
-            }
+                temp = temp.Next;}
             temp.Next = new Node14(input, temp.Next);
             if (temp.Next.Next==null) {
                 tail=temp.Next;
