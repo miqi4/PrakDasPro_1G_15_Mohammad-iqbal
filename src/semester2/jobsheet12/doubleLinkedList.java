@@ -128,4 +128,30 @@ public class doubleLinkedList {
             size--;
         }
     }
+    public int getFirst()throws Exception{
+        if (isEmpty()) {
+            throw new Exception("linked list kosong");
+        }
+        return head.data;
+    }
+    public int getLast()throws Exception{
+        if (isEmpty()) {
+            throw new Exception("linked list kosong");
+        }
+        Node14 tmp = head;
+        while (tmp.next!=null) {
+            tmp=tmp.next;
+        }
+        return tmp.data; 
+    }
+    public int get(int index)throws Exception{
+        if (isEmpty()||index>=size) {
+            throw new Exception("linked list diluar batas");
+        }
+        Node14 tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp=tmp.next;
+        }
+        return tmp.data;
+    }
 }
