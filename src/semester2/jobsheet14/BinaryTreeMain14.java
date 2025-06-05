@@ -13,9 +13,9 @@ public class BinaryTreeMain14 {
         System.out.println(tree.find(3.54) ? "Ditemukan" : "Tidak ditemukan");
         System.out.print("Cari mahasiswa dengan ipk: 3.22 = ");
         System.out.println(tree.find(3.22) ? "Ditemukan" : "Tidak ditemukan");
-        tree.add(new Mahasiswa14("244160205", "Ehsan", "D", 3.37));
-        tree.add(new Mahasiswa14("244160210", "Fizi", "B", 3.46));
-        tree.add(new Mahasiswa14("244160213", "Devi", "A", 3.72));
+        tree.addRekursif(new Mahasiswa14("244160205", "Ehsan", "D", 3.37));
+        tree.addRekursif(new Mahasiswa14("244160210", "Fizi", "B", 3.46));
+        tree.addRekursif(new Mahasiswa14("244160213", "Devi", "A", 3.72));
         System.out.println("\nDaftar semua mahasiswa setelah penambahan 3 mahasiswa:");
         System.out.println("InOrder Traversal:");
         tree.traverseInOrder(tree.root);
@@ -27,5 +27,11 @@ public class BinaryTreeMain14 {
         tree.delete(3.57); 
         System.out.println("\nDaftar semua mahasiswa setelah penghapusan 1 mahasiswa (in order traversal):");
         tree.traverseInOrder(tree.root);
+        System.out.println();
+        tree.cariMaxIPK();
+        System.out.println();
+        tree.cariMinIPK();
+        System.out.println();
+        tree.tampilMahasiswaIPKdiAtas(3.5);
     }
 }

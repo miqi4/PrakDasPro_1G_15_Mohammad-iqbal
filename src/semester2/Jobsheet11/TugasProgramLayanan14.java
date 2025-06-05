@@ -7,12 +7,12 @@ public class TugasProgramLayanan14 {
         int pilihan;
         do {
             System.out.println("\n=== Menu Layanan Kemahasiswaan ===");
-            System.out.println("1. Tambah Antrian Mahasiswa");
-            System.out.println("2. Panggil Antrian");
+            System.out.println("1. Tambah Pasien ke Antrian ");
+            System.out.println("2. Layani pasien ");
             System.out.println("3. Cek Apakah Antrian Kosong");
             System.out.println("4. Tampilkan Antrian Terdepan");
             System.out.println("5. Tampilkan Antrian Terakhir");
-            System.out.println("6. Tampilkan Semua Antrian");
+            System.out.println("6. Tampilkan Antrian");
             System.out.println("7. Hitung Jumlah Antrian");
             System.out.println("8. Kosongkan Antrian");
             System.out.println("0. Keluar");

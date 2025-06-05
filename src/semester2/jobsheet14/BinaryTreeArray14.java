@@ -18,4 +18,19 @@ public class BinaryTreeArray14 {
             }
         }
     }
+    public void add(Mahasiswa14 data) {
+        if (idxLast >= dataMahasiswa.length - 1) {
+            System.out.println("Tree penuh!");
+            return;
+        }
+        idxLast++;
+        dataMahasiswa[idxLast] = data;
+    }
+    public void traversePreOrder(int idxStart) {
+        if (idxStart <= idxLast && dataMahasiswa[idxStart] != null) {
+            dataMahasiswa[idxStart].tampilInformasi();
+            traversePreOrder(2 * idxStart + 1);
+            traversePreOrder(2 * idxStart + 2);
+        }
+    }
 }

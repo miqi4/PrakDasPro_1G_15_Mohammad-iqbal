@@ -9,12 +9,13 @@ public class BinaryTreeArrayMain14 {
         Mahasiswa14 mhs5 = new Mahasiswa14("244160213", "Devi", "A", 3.48);
         Mahasiswa14 mhs6 = new Mahasiswa14("244160205", "Ehsan", "D", 3.61);
         Mahasiswa14 mhs7 = new Mahasiswa14("244160210", "Fizi", "B", 3.86);
-        Mahasiswa14[] dataMahasiswa = {
-            mhs1, mhs2, mhs3, mhs4, mhs5, mhs6, mhs7, null, null, null
-        };
+        Mahasiswa14[] dataMahasiswa = {mhs1, mhs2, mhs3, mhs4, mhs5, mhs6, mhs7, null, null, null};
         int idxLast = 6;
         bta.populateData(dataMahasiswa, idxLast);
         System.out.println("\nInOrder Traversal Mahasiswa: ");
         bta.traverseInOrder(0);
+        bta.add(new Mahasiswa14("244160150", "andi", "A", 3.97));
+        System.out.println("\nPreOrder Traversal Mahasiswa: ");
+        bta.traversePreOrder(0);
     }
 }
